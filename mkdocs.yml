@@ -1,0 +1,5 @@
+site_name: Neovim Cheatsheet
+theme:
+  name: material
+  favicon: img/favicon.ico
+  logo: img/logo.svg

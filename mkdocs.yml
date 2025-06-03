@@ -1,4 +1,5 @@
 site_name: Neovim Cheatsheet
+site_url: https://vasileboris.github.io/nvim-cheat-sheet/
 theme:
   name: material
   favicon: img/favicon.ico

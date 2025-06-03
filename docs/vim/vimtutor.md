@@ -60,7 +60,7 @@ To move the cursor, press the h,j,k,l keys as indicated.
 1. Move the cursor to the beginning of a word that needs to be deleted.
 2. Type `dw` to make the word disappear.
 
-### Detelete to the end of line
+### Delete to the end of line
 
 1. Move the cursor to the place on the that needs to be deleted.
 2. Type `d$` to delete to the end of the line. 
@@ -69,5 +69,3 @@ To move the cursor, press the h,j,k,l keys as indicated.
 
 Save the file with changes and exit Vim with: `:wq <ENTER>`
 
-## TBD
-Lesson 1.2.3: ON OPERATORS AND MOTIONS

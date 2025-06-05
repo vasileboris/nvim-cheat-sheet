@@ -2,8 +2,8 @@
 
 ## Exit
 
-1. Press the `<ESC>` key (to make sure you are in Normal mode).
-2. Type: `:q! <ENTER>`.
+* Press the `<ESC>` key (to make sure you are in Normal mode).
+* Type: `:q! <ENTER>`.
 
 NOTE: `:q! <ENTER>` discards any changes you made.
 
@@ -21,52 +21,90 @@ To move the cursor, press the h,j,k,l keys as indicated.
       v
 ```
 
+## Save changes
+
+Save the file with changes and exit Vim with: `:wq <ENTER>`
+
 ## Insert
 
 ### Before character
 
-1. Move the cursor on top of the character before you want to insert text. 
-2. Press `i` to insert text.
+* Move the cursor on top of the character before you want to insert text.
+* Press `i` to insert text.
 
 ### After character
 
-1. Move the cursor on top of the character after you want to insert text. 
-2. Press `a` to insert text.
+* Move the cursor on top of the character after you want to insert text.
+* Press `a` to insert text.
 
 ### Before line 
 
-1. Move the cursor to the line where you want to append text. It does not matter on what character the cursor is in that line.
-2. Press `I` to insert text.
+* Move the cursor to the line where you want to append text. It does not matter on what character the cursor is in that line.
+* Press `I` to insert text.
 
 ### After line 
 
-1. Move the cursor to the line where you want to append text. It does not matter on what character the cursor is in that line.
-2. Press `A` to insert text.
+* Move the cursor to the line where you want to append text. It does not matter on what character the cursor is in that line.
+* Press `A` to insert text.
 
 ### New line
 
-1. Press `o` to insert new line below the cursor.
-2. Press `O` to insert new line above the cursor.
+* Press `o` to insert new line below the cursor.
+* Press `O` to insert new line above the cursor.
 
 ## Delete
 
 ### Delete a character
 
-1. Move the cursor until it is on top of the character you want to delete.
-1. Press `x` to delete the character under the cursor.
+* Move the cursor until it is on top of the character you want to delete.
+* Press `x` to delete the character under the cursor.
 
 ### Delete a word
 
-1. Move the cursor to the beginning of a word that needs to be deleted.
-2. Type `dw` to make the word disappear.
+* Move the cursor to the beginning of a word that needs to be deleted.
+* Type `dw` to make the word disappear.
 
 ### Delete to the end of line
 
-1. Move the cursor to the place on the that needs to be deleted.
-2. Type `d$` to delete to the end of the line. 
+* Move the cursor to the place on the that needs to be deleted.
+* Type `d$` to delete to the end of the line.
 
-### Save changes
+## Operators & motions
 
-Save the file with changes and exit Vim with: `:wq <ENTER>`
+### Delete
 
-## TBD ...
+Many commands that change text are made from an operator and a motion.
+The format for a delete command with the `d` delete operator is as follows:
+
+`d motion`
+
+Where:
+
+* d - is the delete operator.
+* motion - is what the operator will operate on (listed below).
+
+A short list of motions:
+
+* w - until the start of the next word, EXCLUDING its first character.
+* e - to the end of the current word, INCLUDING the last character.
+* $ - to the end of the line, INCLUDING the last character.
+
+### Use a count for a motion
+
+Typing a number before a motion repeats it that many times:
+
+* Type `2w` to move the cursor two words forward.
+* Type `3e` to move the cursor to the end of the third word forward.
+* Type  `0` (zero) to move to the start of the line.
+* Type `d2w` to delete the two words.
+
+### Delete lines
+
+* Type `dd` to delete the line.
+* Type `2dd` to delete two lines.
+
+## Undo command
+
+* Type `u` to undo the last command executed.
+* Type `U` to return the line to its original state.
+* Type `CTRL-R` (keeping CTRL key pressed while hitting R) a few times to redo the commands (undo the undos).
